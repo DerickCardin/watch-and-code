@@ -1,0 +1,143 @@
+function sayHiTo(person){console.log('hi', person);}
+undefined
+sayHitTo ('gordon')
+VM298:1 Uncaught ReferenceError: sayHitTo is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM298:1
+sayHiTo ('gordon')
+VM294:1 hi gordon
+undefined
+var todos = ['item 1', 'item 2', 'item 3']
+undefined
+function displayTodos() {
+console.log('My todos:', todos);
+}
+
+undefined
+function displayTodos() {
+console.log('My todos:', todos);
+}
+
+undefined
+displayTodos()
+VM331:2 My todos: (3) ["item 1", "item 2", "item 3"]
+undefined
+function addTodo() {
+todos.push('new todo');
+}
+undefined
+addTodo()
+undefined
+todos
+(4) ["item 1", "item 2", "item 3", "new todo"]
+addTodo
+ƒ addTodo() {
+todos.push('new todo');
+}
+addTodo()
+undefined
+displayTodos()
+VM331:2 My todos: (5) ["item 1", "item 2", "item 3", "new todo", "new todo"]
+undefined
+function addTodo() {
+todos.push('new todo');
+displayTodos();
+}
+undefined
+addTodo()
+VM331:2 My todos: (6) ["item 1", "item 2", "item 3", "new todo", "new todo", "new todo"]
+undefined
+function addTodo(todo) {
+todos.push(todo);
+displayTodos();
+}
+undefined
+add todo ('hello there')
+VM381:1 Uncaught SyntaxError: Unexpected identifier
+addTodo ('hello there')
+VM331:2 My todos: (7) ["item 1", "item 2", "item 3", "new todo", "new todo", "new todo", "hello there"]
+undefined
+function addTodo(todo) {
+todos.push(todo);
+displayTodos();
+}
+undefined
+add todo('some stuff')
+VM393:1 Uncaught SyntaxError: Unexpected identifier
+addTodo 
+ƒ addTodo(todo) {
+todos.push(todo);
+displayTodos();
+}
+function changeTodo(position, newValue){
+todos[position] = newValue;
+}
+undefined
+displayTodos
+ƒ displayTodos() {
+console.log('My todos:', todos);
+}
+displayTodos
+ƒ displayTodos() {
+console.log('My todos:', todos);
+}
+displayTodos()
+VM331:2 My todos: (7) ["item 1", "item 2", "item 3", "new todo", "new todo", "new todo", "hello there"]
+undefined
+changeTodo(0, 'Changed')
+undefined
+displayTodos()
+VM331:2 My todos: (7) ["Changed", "item 2", "item 3", "new todo", "new todo", "new todo", "hello there"]
+undefined
+function changeTodo(position, newValue){
+todos[position] = newValue;
+displayTodos();
+}
+undefined
+displayTodos()
+VM331:2 My todos: (7) ["Changed", "item 2", "item 3", "new todo", "new todo", "new todo", "hello there"]
+undefined
+changeTodo(0, 'Changed again')
+VM331:2 My todos: (7) ["Changed again", "item 2", "item 3", "new todo", "new todo", "new todo", "hello there"]
+undefined
+function changeTodo(position, newValue){
+todos[position] = newValue;
+displayTodos();
+}
+undefined
+function changeTodo(position, newValue){
+todos[position] = newValue;
+displayTodos();
+}
+undefined
+function deleteTodo(position){
+todos.splice(position, 1);
+}
+undefined
+displayTodos()
+VM331:2 My todos: (7) ["Changed again", "item 2", "item 3", "new todo", "new todo", "new todo", "hello there"]
+undefined
+deleteTodo(0)
+undefined
+function deleteTodo(position){
+todos.splice(position, 1);
+displayTodos();
+}
+undefined
+displayTodos()
+VM331:2 My todos: (6) ["item 2", "item 3", "new todo", "new todo", "new todo", "hello there"]
+undefined
+deleteTodo(0)
+VM331:2 My todos: (5) ["item 3", "new todo", "new todo", "new todo", "hello there"]
+undefined
+deleteTodo(2);
+VM331:2 My todos: (4) ["item 3", "new todo", "new todo", "hello there"]
+undefined
+deleteTodo(2);
+VM331:2 My todos: (3) ["item 3", "new todo", "hello there"]
+undefined
+function deleteTodo(position){
+todos.splice(position, 1);
+displayTodos();
+}
+undefined
