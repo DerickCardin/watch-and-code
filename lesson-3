@@ -1,0 +1,233 @@
+var myComputer = {
+operatingSystem: 'mac',
+screenSize: '15 inches',
+purchaseYear: 2011
+}
+undefined
+myComputer
+{operatingSystem: "mac", screenSize: "15 inches", purchaseYear: 2011}
+myComputer.operatingSystem
+"mac"
+myComputer.screenSize
+"15 inches"
+myComputer.purchaseYear
+2011
+var derick{
+name: 'Derick',
+sayName: function (){
+console.log(this);
+}
+}
+VM690:1 Uncaught SyntaxError: Unexpected token {
+derick.sayName()
+VM695:1 Uncaught ReferenceError: derick is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM695:1
+derick.sayName();
+derick
+VM702:1 Uncaught ReferenceError: derick is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM702:1
+derick.sayName()
+VM709:1 Uncaught ReferenceError: derick is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM709:1
+var derick
+undefined
+var derick = {
+name: 'Derick',
+sayName: function() {
+console.log(this);
+}}
+undefined
+derick
+{name: "Derick", sayName: ƒ}
+derick.sayName();
+VM723:4 {name: "Derick", sayName: ƒ}name: "Derick"sayName: ƒ ()__proto__: Object
+undefined
+var derick = {
+name: 'Derick',
+sayName: function() {
+console.log(this.name);
+}}
+undefined
+derick.sayName()
+VM736:4 Derick
+undefined
+var derick = {
+name: 'Derick',
+sayName: function() {
+console.log(this.name);
+}}
+undefined
+var todos
+undefined
+{
+var todoList ={
+todos: ['item 1', 'item 2', 'item 3']
+};
+VM973:4 Uncaught SyntaxError: Unexpected end of input
+todoList
+VM977:1 Uncaught ReferenceError: todoList is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM977:1
+todoList()
+VM981:1 Uncaught ReferenceError: todoList is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM981:1
+var todoList = {
+todos: ['item 1', 'item 2', 'item 3']};
+undefined
+todoList
+{todos: Array(3)}
+{
+var todoList ={
+todos: ['item 1', 'item 2', 'item 3'],
+displayTodos: function(){
+console.log('My Todos', this.todos);
+};
+VM1012:6 Uncaught SyntaxError: Unexpected token ;
+todoList.displayTodos();
+VM1018:1 Uncaught TypeError: todoList.displayTodos is not a function
+    at <anonymous>:1:10
+(anonymous) @ VM1018:1
+todoList.displayTodos()
+VM1026:1 Uncaught TypeError: todoList.displayTodos is not a function
+    at <anonymous>:1:10
+(anonymous) @ VM1026:1
+var todoList ={
+todos: ['item 1', 'item 2', 'item 3'],
+displayTodos: function(){
+console.log('My Todos', this.todos);
+};
+VM1028:5 Uncaught SyntaxError: Unexpected token ;
+var todoList ={
+todos: ['item 1', 'item 2', 'item 3'],
+displayTodos: function(){
+console.log('My Todos', this.todos);
+};}
+VM1036:5 Uncaught SyntaxError: Unexpected token ;
+var todoList ={
+todos: ['item 1', 'item 2', 'item 3'],
+displayTodos: function(){
+console.log('My Todos', this.todos);
+};
+}
+VM1040:5 Uncaught SyntaxError: Unexpected token ;
+var todoList ={
+todos: ['item 1', 'item 2', 'item 3'],
+displayTodos: function(){
+console.log('My Todos', this.todos);
+}
+}
+undefined
+todoList.displayTodos()
+VM1043:4 My Todos (3) ["item 1", "item 2", "item 3"]
+undefined
+var todoList ={
+todos: ['item 1', 'item 2', 'item 3'],
+displayTodos: function(){
+console.log('My Todos', this.todos);
+},
+addTodo: function(todo) {
+this.todos.push(todo);
+this.displayTodos();
+}
+}
+undefined
+todoList.addTodo('plunker');
+VM1069:4 My Todos (4) ["item 1", "item 2", "item 3", "plunker"]
+undefined
+var todoList ={
+todos: ['item 1', 'item 2', 'item 3'],
+displayTodos: function(){
+console.log('My Todos', this.todos);
+},
+addTodo: function(todo) {
+this.todos.push(todo);
+this.displayTodos();
+},
+function changeTodo(position, newValue){
+this.todos[position] = newValue;
+this.displayTodos();
+}
+}
+
+
+VM1090:10 Uncaught SyntaxError: Unexpected identifier
+var todoList ={
+todos: ['item 1', 'item 2', 'item 3'],
+displayTodos: function(){
+console.log('My Todos', this.todos);
+},
+addTodo: function(todo) {
+this.todos.push(todo);
+this.displayTodos();
+},
+function changeTodo(position, newValue){
+this.todos[position] = newValue;
+this.displayTodos();
+}
+}
+VM1092:10 Uncaught SyntaxError: Unexpected identifier
+var todoList ={
+todos: ['item 1', 'item 2', 'item 3'],
+displayTodos: function(){
+console.log('My Todos', this.todos);
+},
+addTodo: function(todo) {
+this.todos.push(todo);
+this.displayTodos();
+},
+changeTodo: function(position, newValue){
+this.todos[position] = newValue;
+this.displayTodos();
+}
+}
+undefined
+todoList.changeTodo(0, 'first');
+VM1094:4 My Todos (3) ["first", "item 2", "item 3"]
+undefined
+var todoList ={
+todos: ['item 1', 'item 2', 'item 3'],
+displayTodos: function(){
+console.log('My Todos', this.todos);
+},
+addTodo: function(todo) {
+this.todos.push(todo);
+this.displayTodos();
+},
+changeTodo: function(position, newValue){
+this.todos[position] = newValue;
+this.displayTodos();
+},
+delteTodo: function(position){
+todos.splice(position, 1);
+displayTodos();
+}
+VM1170:17 Uncaught SyntaxError: Unexpected end of input
+var todoList ={
+todos: ['item 1', 'item 2', 'item 3'],
+displayTodos: function(){
+console.log('My Todos', this.todos);
+},
+addTodo: function(todo) {
+this.todos.push(todo);
+this.displayTodos();
+},
+changeTodo: function(position, newValue){
+this.todos[position] = newValue;
+this.displayTodos();
+},
+delteTodo: function(position){
+this.todos.splice(position, 1);
+this.displayTodos();
+}
+}
+undefined
+todoList.displayTodos()
+VM1178:4 My Todos (3) ["item 1", "item 2", "item 3"]
+undefined
+todoList.delteTodo(1)
+VM1178:4 My Todos (2) ["item 1", "item 3"]
+undefined
