@@ -1,0 +1,200 @@
+
+//FINAL CODE //
+
+var todoList ={
+todos: [],
+displayTodos: function(){
+console.log('My Todos', this.todos);
+},
+addTodo: function(todoText) {
+this.todos.push({
+todoText: todoText,
+completed: false});
+this.displayTodos();
+},
+changeTodo: function(position, todoText){
+this.todos[position].todoText = todoText;
+this.displayTodos();
+},
+delteTodo: function(position){
+this.todos.splice(position, 1);
+this.displayTodos();
+},
+toggleCompleted: function(position) {
+ var todo = this.todos[position];
+ todo.completed = !todo.completed;
+ this.displayTodos();
+ }
+}
+
+// CONSOLE TESTING //
+
+var todoList ={
+todos: ['item 1', 'item 2', 'item 3'],
+displayTodos: function(){
+console.log('My Todos', this.todos);
+},
+addTodo: function(todo) {
+this.todos.push(todo);
+this.displayTodos();
+},
+changeTodo: function(position, newValue){
+this.todos[position] = newValue;
+this.displayTodos();
+},
+delteTodo: function(position){
+this.todos.splice(position, 1);
+this.displayTodos();
+}
+}
+undefined
+var todoList ={
+todos: [],
+displayTodos: function(){
+console.log('My Todos', this.todos);
+},
+addTodo: function(todoText) {
+this.todos.push({
+todoText: todoText,
+completed: flase
+});
+this.displayTodos();
+},
+changeTodo: function(position, newValue){
+this.todos[position] = newValue;
+this.displayTodos();
+},
+delteTodo: function(position){
+this.todos.splice(position, 1);
+this.displayTodos();
+}
+}
+undefined
+todoList.addTodo('this is an object');
+VM159:9 Uncaught ReferenceError: flase is not defined
+    at Object.addTodo (<anonymous>:9:12)
+    at <anonymous>:1:10
+addTodo @ VM159:9
+(anonymous) @ VM167:1
+todoList.addTodo('this is an object')
+VM159:9 Uncaught ReferenceError: flase is not defined
+    at Object.addTodo (<anonymous>:9:12)
+    at <anonymous>:1:10
+addTodo @ VM159:9
+(anonymous) @ VM173:1
+todoList.addTodo('this is an object')
+VM159:9 Uncaught ReferenceError: flase is not defined
+    at Object.addTodo (<anonymous>:9:12)
+    at <anonymous>:1:10
+addTodo @ VM159:9
+(anonymous) @ VM179:1
+var todoList ={
+todos: ['item 1', 'item 2', 'item 3'],
+displayTodos: function(){
+console.log('My Todos', this.todos);
+},
+addTodo: function(todoText) {
+this.todos.push({
+todoText: todoText
+completed: false});
+this.displayTodos();
+},
+changeTodo: function(position, newValue){
+this.todos[position] = newValue;
+this.displayTodos();
+},
+delteTodo: function(position){
+this.todos.splice(position, 1);
+this.displayTodos();
+}
+}
+VM181:9 Uncaught SyntaxError: Unexpected identifier
+var todoList ={
+todos: [],
+displayTodos: function(){
+console.log('My Todos', this.todos);
+},
+addTodo: function(todoText) {
+this.todos.push({
+todoText: todoText,
+completed: false});
+this.displayTodos();
+},
+changeTodo: function(position, newValue){
+this.todos[position] = newValue;
+this.displayTodos();
+},
+delteTodo: function(position){
+this.todos.splice(position, 1);
+this.displayTodos();
+}
+}
+undefined
+todoList.addTodo('this is an object')
+VM183:4 My Todos [{…}]0: {todoText: "this is an object", completed: false}length: 1__proto__: Array(0)
+undefined
+var todoList ={
+todos: [],
+displayTodos: function(){
+console.log('My Todos', this.todos);
+},
+addTodo: function(todoText) {
+this.todos.push({
+todoText: todoText,
+completed: false});
+this.displayTodos();
+},
+changeTodo: function(position, todoText){
+this.todos[position].todoText = todoText;
+this.displayTodos();
+},
+delteTodo: function(position){
+this.todos.splice(position, 1);
+this.displayTodos();
+}
+}
+undefined
+todoList.addTodo('first try')
+VM193:4 My Todos [{…}]0: {todoText: "first try", completed: false}length: 1__proto__: Array(0)
+undefined
+todoList.changeTodo(0, 'second try')
+VM193:4 My Todos [{…}]0: {todoText: "second try", completed: false}length: 1__proto__: Array(0)
+undefined
+var gordonBoolen = false;
+undefined
+!gordonBoolen
+true
+gordonBoolen = !gordonBoolen
+true
+var todoList ={
+todos: [],
+displayTodos: function(){
+console.log('My Todos', this.todos);
+},
+addTodo: function(todoText) {
+this.todos.push({
+todoText: todoText,
+completed: false});
+this.displayTodos();
+},
+changeTodo: function(position, todoText){
+this.todos[position].todoText = todoText;
+this.displayTodos();
+},
+delteTodo: function(position){
+this.todos.splice(position, 1);
+this.displayTodos();
+},
+toggleCompleted: function(position) {
+ var todo = this.todos[position];
+ todo.completed = !todo.completed;
+ this.displayTodos();
+ }
+}
+undefined
+todoList.addTodo('boolen testing')
+VM292:4 My Todos [{…}]0: {todoText: "boolen testing", completed: true}length: 1__proto__: Array(0)
+undefined
+todoList.toggleCompleted(0)
+VM292:4 My Todos [{…}]0: {todoText: "boolen testing", completed: true}length: 1__proto__: Array(0)
+undefined

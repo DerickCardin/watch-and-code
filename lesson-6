@@ -1,0 +1,437 @@
+// CODE FOR LESSON //
+var todoList ={
+todos: [],
+displayTodos: function(){
+console.log('My Todos:');
+for (var i = 0; i < this.todos.length; i++) {
+ console.log(this.todos[i].todoText);
+}
+if (this.todos.length === 0) {
+ console.log ('Your todo list is empty!');
+ }
+ else {console.log('My Todos:');
+for (var i = 0; i < this.todos.length; i++) {
+
+ if(this.todos[i].completed === true) {
+console.log('(x)', this.todos[i].todoText);
+ } else {
+console.log('( )', this.todos[i].todoText);
+  }
+}}
+},
+addTodo: function(todoText) {
+this.todos.push({
+todoText: todoText,
+completed: false});
+this.displayTodos();
+},
+changeTodo: function(position, todoText){
+this.todos[position].todoText = todoText;
+this.displayTodos();
+},
+delteTodo: function(position){
+this.todos.splice(position, 1);
+this.displayTodos();
+},
+toggleCompleted: function(position) {
+ var todo = this.todos[position];
+ todo.completed = !todo.completed;
+ this.displayTodos();
+ },
+ toggleAll: function() {
+ var totalTodos = this.todos.length;
+ var completedTodos = 0;
+ 
+ 
+ for (var i = 0; i < totalTodos; i++) {
+ if (this.todos[i].completed === true) {
+ completedTodos++;}
+ }
+ 
+
+  if (completedTodos === totalTodos) {
+  for (var i = 0; i < totalTodos; i++) {
+  this.todos[i].completed = false;
+  }
+  }
+   else { 
+  for (var i = 0; i < totalTodos; i++){
+  this.todos[i].completed = true;
+  }
+  }
+  this.displayTodos();
+ }
+}
+
+
+
+
+// CONSOLE //
+
+var todoList ={
+todos: [],
+displayTodos: function(){
+console.log('My Todos:');
+for (var i = 0; i < this.todos.length; i++) {
+ console.log(this.todos[i].todoText);
+}
+if (this.todos.length === 0) {
+ console.log ('Your todo list is empty!');
+ }
+ else {console.log('My Todos:');
+for (var i = 0; i < this.todos.length; i++) {
+
+ if(this.todos[i].completed === true) {
+console.log('(x)', this.todos[i].todoText);
+ } else {
+console.log('( )', this.todos[i].todoText);
+  }
+}}
+},
+addTodo: function(todoText) {
+this.todos.push({
+todoText: todoText,
+completed: false});
+this.displayTodos();
+},
+changeTodo: function(position, todoText){
+this.todos[position].todoText = todoText;
+this.displayTodos();
+},
+delteTodo: function(position){
+this.todos.splice(position, 1);
+this.displayTodos();
+},
+toggleCompleted: function(position) {
+ var todo = this.todos[position];
+ todo.completed = !todo.completed;
+ this.displayTodos();
+ },
+ toggleAll: function() {
+ var totalTodos = this.todos.length;
+ var completedTodos = 0;
+ 
+ 
+ for (var i = 0; i < totalTodos; i++) {
+ if (this.todos[i].completed === true) {
+ completedTodos++;}
+ }
+ 
+
+  if (completedTodos === totalTodos) {
+  for (var i = 0; i < totalTodos; i++) {
+  this.todos[i].completed = false;
+  }
+  }
+ }
+}
+
+undefined
+todoList.addTodo('first')
+VM621:4 My Todos:
+VM621:6 first
+VM621:11 My Todos:
+VM621:17 ( ) first
+undefined
+todoList.addTodo('second')
+VM621:4 My Todos:
+VM621:6 first
+VM621:6 second
+VM621:11 My Todos:
+VM621:17 ( ) first
+VM621:17 ( ) second
+undefined
+todoList.toggleCompleted(0)
+VM621:4 My Todos:
+VM621:6 first
+VM621:6 second
+VM621:11 My Todos:
+VM621:15 (x) first
+VM621:17 ( ) second
+undefined
+todoList.toggleCompleted(1)
+VM621:4 My Todos:
+VM621:6 first
+VM621:6 second
+VM621:11 My Todos:
+VM621:15 (x) first
+VM621:15 (x) second
+undefined
+todoList.toggleAll()
+undefined
+todoList.displayTodos()
+VM621:4 My Todos:
+VM621:6 first
+VM621:6 second
+VM621:11 My Todos:
+VM621:17 ( ) first
+VM621:17 ( ) second
+undefined
+var todoList ={
+todos: [],
+displayTodos: function(){
+console.log('My Todos:');
+for (var i = 0; i < this.todos.length; i++) {
+ console.log(this.todos[i].todoText);
+}
+if (this.todos.length === 0) {
+ console.log ('Your todo list is empty!');
+ }
+ else {console.log('My Todos:');
+for (var i = 0; i < this.todos.length; i++) {
+
+ if(this.todos[i].completed === true) {
+console.log('(x)', this.todos[i].todoText);
+ } else {
+console.log('( )', this.todos[i].todoText);
+  }
+}}
+},
+addTodo: function(todoText) {
+this.todos.push({
+todoText: todoText,
+completed: false});
+this.displayTodos();
+},
+changeTodo: function(position, todoText){
+this.todos[position].todoText = todoText;
+this.displayTodos();
+},
+delteTodo: function(position){
+this.todos.splice(position, 1);
+this.displayTodos();
+},
+toggleCompleted: function(position) {
+ var todo = this.todos[position];
+ todo.completed = !todo.completed;
+ this.displayTodos();
+ },
+ toggleAll: function() {
+ var totalTodos = this.todos.length;
+ var completedTodos = 0;
+ 
+ 
+ for (var i = 0; i < totalTodos; i++) {
+ if (this.todos[i].completed === true) {
+ completedTodos++;}
+ }
+ 
+
+  if (completedTodos === totalTodos) {
+  for (var i = 0; i < totalTodos; i++) {
+  this.todos[i].completed = false;
+  } else { 
+  for (var i = 0; i < totalTodos; i++){
+  this.todos[i].completed = true;
+  }
+  }
+  }
+  this.displayTodos();
+ }
+}
+
+VM658:54 Uncaught SyntaxError: Unexpected token else
+var todoList ={
+todos: [],
+displayTodos: function(){
+console.log('My Todos:');
+for (var i = 0; i < this.todos.length; i++) {
+ console.log(this.todos[i].todoText);
+}
+if (this.todos.length === 0) {
+ console.log ('Your todo list is empty!');
+ }
+ else {console.log('My Todos:');
+for (var i = 0; i < this.todos.length; i++) {
+
+ if(this.todos[i].completed === true) {
+console.log('(x)', this.todos[i].todoText);
+ } else {
+console.log('( )', this.todos[i].todoText);
+  }
+}}
+},
+addTodo: function(todoText) {
+this.todos.push({
+todoText: todoText,
+completed: false});
+this.displayTodos();
+},
+changeTodo: function(position, todoText){
+this.todos[position].todoText = todoText;
+this.displayTodos();
+},
+delteTodo: function(position){
+this.todos.splice(position, 1);
+this.displayTodos();
+},
+toggleCompleted: function(position) {
+ var todo = this.todos[position];
+ todo.completed = !todo.completed;
+ this.displayTodos();
+ },
+ toggleAll: function() {
+ var totalTodos = this.todos.length;
+ var completedTodos = 0;
+ 
+ 
+ for (var i = 0; i < totalTodos; i++) {
+ if (this.todos[i].completed === true) {
+ completedTodos++;}
+ }
+ 
+
+  if (completedTodos === totalTodos) {
+  for (var i = 0; i < totalTodos; i++) {
+  this.todos[i].completed = false;
+  }}
+  else { 
+  for (var i = 0; i < totalTodos; i++){
+  this.todos[i].completed = true;
+  }
+  }
+  }
+  this.displayTodos();
+ }
+}
+
+VM660:61 Uncaught SyntaxError: Unexpected token this
+var todoList ={
+todos: [],
+displayTodos: function(){
+console.log('My Todos:');
+for (var i = 0; i < this.todos.length; i++) {
+ console.log(this.todos[i].todoText);
+}
+if (this.todos.length === 0) {
+ console.log ('Your todo list is empty!');
+ }
+ else {console.log('My Todos:');
+for (var i = 0; i < this.todos.length; i++) {
+
+ if(this.todos[i].completed === true) {
+console.log('(x)', this.todos[i].todoText);
+ } else {
+console.log('( )', this.todos[i].todoText);
+  }
+}}
+},
+addTodo: function(todoText) {
+this.todos.push({
+todoText: todoText,
+completed: false});
+this.displayTodos();
+},
+changeTodo: function(position, todoText){
+this.todos[position].todoText = todoText;
+this.displayTodos();
+},
+delteTodo: function(position){
+this.todos.splice(position, 1);
+this.displayTodos();
+},
+toggleCompleted: function(position) {
+ var todo = this.todos[position];
+ todo.completed = !todo.completed;
+ this.displayTodos();
+ },
+ toggleAll: function() {
+ var totalTodos = this.todos.length;
+ var completedTodos = 0;
+ 
+ 
+ for (var i = 0; i < totalTodos; i++) {
+ if (this.todos[i].completed === true) {
+ completedTodos++;}
+ }
+ 
+
+  if (completedTodos === totalTodos) {
+  for (var i = 0; i < totalTodos; i++) {
+  this.todos[i].completed = false;
+  }
+  }
+   else { 
+  for (var i = 0; i < totalTodos; i++){
+  this.todos[i].completed = true;
+  }
+  }
+  this.displayTodos();
+ }
+}
+
+undefined
+todoList.addTodo('first')
+VM662:4 My Todos:
+VM662:6 first
+VM662:11 My Todos:
+VM662:17 ( ) first
+undefined
+todoList.addTodo('second')
+VM662:4 My Todos:
+VM662:6 first
+VM662:6 second
+VM662:11 My Todos:
+VM662:17 ( ) first
+VM662:17 ( ) second
+undefined
+todoList.addTodo('third')
+VM662:4 My Todos:
+VM662:6 first
+VM662:6 second
+VM662:6 third
+VM662:11 My Todos:
+VM662:17 ( ) first
+VM662:17 ( ) second
+VM662:17 ( ) third
+undefined
+todoList.toggleAll();
+VM662:4 My Todos:
+VM662:6 first
+VM662:6 second
+VM662:6 third
+VM662:11 My Todos:
+VM662:15 (x) first
+VM662:15 (x) second
+VM662:15 (x) third
+undefined
+todoList.toggleAll()
+VM662:4 My Todos:
+VM662:6 first
+VM662:6 second
+VM662:6 third
+VM662:11 My Todos:
+VM662:17 ( ) first
+VM662:17 ( ) second
+VM662:17 ( ) third
+undefined
+todoList.toggleCompleted(0)
+VM662:4 My Todos:
+VM662:6 first
+VM662:6 second
+VM662:6 third
+VM662:11 My Todos:
+VM662:15 (x) first
+VM662:17 ( ) second
+VM662:17 ( ) third
+undefined
+todoList.toggleAll()
+VM662:4 My Todos:
+VM662:6 first
+VM662:6 second
+VM662:6 third
+VM662:11 My Todos:
+VM662:15 (x) first
+VM662:15 (x) second
+VM662:15 (x) third
+undefined
+todoList.toggleAll()
+VM662:4 My Todos:
+VM662:6 first
+VM662:6 second
+VM662:6 third
+VM662:11 My Todos:
+VM662:17 ( ) first
+VM662:17 ( ) second
+VM662:17 ( ) third
+undefined
